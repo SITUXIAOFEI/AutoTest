@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="SuiteName">
+
+    <!--运行Groups下的GroupsOnClass1、2、3类包-->
+    <!--AllTest开始运行-->
+    <test name="AllTest">
+        <classes>
+            <class name="com.course.testng.Groups.GroupsOnClass1"/>
+            <class name="com.course.testng.Groups.GroupsOnClass2"/>
+            <class name="com.course.testng.Groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+    <!--运行Groups下的GroupsOnClass1、2、3类包-->   <!--AllTest运行结束-->
+
+
+    <!--运行Groups下的GroupsOnClass1、2、3中，分组为stu的类包-->
+    <!--OnlyRunStu开始运行-->
+    <test name="OnlyRunStu">
+        <!--在罗列包中挑选需要运行的分组-->
+        <groups>
+            <run>
+                <include name="stu"/>
+            </run>
+        </groups>
+        <!--罗列需要运行类包-->
+        <classes>
+            <class name="com.course.testng.Groups.GroupsOnClass1"/>
+            <class name="com.course.testng.Groups.GroupsOnClass2"/>
+            <class name="com.course.testng.Groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+    <!--运行Groups下的GroupsOnClass1、2、3中，分组为stu的类包-->  <!--OnlyRunStu运行结束-->
+</suite>
