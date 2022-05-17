@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--parallel，指定的执行的级别，methods为方法级别，tests为test tag的用例，classs为class tag的用例(test tag指的是xml文件的标签）-->
+<!--不同的tests、classs都可以在不同的线程下执行，相同的tests、classs只能在同一线程里执行-->
+
+<!--以下执行的级别是方法级别(methods),线程数为2-->
+<suite name="ThreadTest" parallel="methods" thread-count="2">
+
+        <!--
+        methods级别：所有用例都可以在不同的线程下去执行；
+        thread-count代表最大并发的线程数
+        xml文件配置的这种方法不能指定线程池，只有方法上才可以指定
+        -->
+    <test name="demo1">
+        <classes>
+            <class name="com.course.testng.MultiThread.MultiThreadOnXml" />
+        </classes>
+    </test>
+</suite>
